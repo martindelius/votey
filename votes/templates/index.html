@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Online-Abstimmung auf der fds-Akademie 2016 - Willkommen!</h1>
+<p>Nicht erst seit dem Aufkommen und Vergehen der Piratenpartei wird in Parteien und politischen Organisationen eifrig über die Frage der Online-Beteiligung gerungen. Der Bundesausschuss der LINKEN hat erst kürzlich einen entsprechenden Antrag zugunsten eines Konzeptes für einen eventuellen Online-Mitgliederentscheid angenommen. Das <a href="http://forum-ds.de">Forum demokratischer Sozialismus</a> geht voran! Auf unserer <a href="http://fds-akademie.de/">Akademie 2016</a> probieren wir aus, worüber andere noch reden.</p>
+
+<h2>Die Abstimmung zum Workshop "Was braucht Digitalisierung von Politik, Parlament und Partei?"</h2>
+
+<p>Alle Teilnehmenden der <a href="http://fds-akademie.de/">Akademie 2016</a> sollen bei diesem Experiment die Möglichkeit bekommen über die Forderungen unserer Expertinnen und Experten aus dem Workshop <a href="http://fds-akademie.de/transparenz-beteiligung-und-teilhabe-was-braucht-die-digitalisierung-von-politik-parlament-und-partei/">Transparenz, Beteiligung und Teilhabe – Was braucht die Digitalisierung von Politik, Parlament und Partei?</a> abzustimmen. Dazu haben wir eigens eine Plattform gestartet, die auf möglichst einfache und nachvollziehbare Weise valide Meinungsbilder einholt.</p>
+
+<h2>So funktioniert es</h2>
+
+<p>Bei der Anmeldung zur Akademie vor Ort in Leipzig habt ihr neben euren üblichen Tagungsunterlagen ein so genanntes <b>Token</b> bekommen. Mit diesem könnt ihr euch im <b>ersten Schritt</b> <a href="{% url 'votes:register' %}">hier registrieren</a></p>
+
+<p>Der <b>zweite Schritt</b> ist dann schon die Abstimmung. Nach dem Ende des Workshops am Samstag, den 26.11.2016, gegen 17:30 Uhr werden die diskutierten und bearbeiteten Forderungen als <a href="{% url 'votes:index' %}">Abstimmungen</a> eingestellt und für einen Tag zur Abstimmung gestellt.</p> 
+
+<p>Das <b>Ergebnis</b> der Abstimmung kann nach Ablauf der Abstimmungszeit hier eingesehen werden. Natürlich werden wir die Meinungsbilder im Nachgang der Akademie auswerten und die Auswertung und die Ergebnisse veröffentlichen.</p>
+
+<h2>Deine Meinung ist gefragt</h2>
+
+<p>Es ist immer einfacher von Zustimmung oder Ablehnung konkreter politischer Inhalte einfach auszugehen. Wir wollen es genau wissen. Nehmt Euch also bitte ein wenig Zeit mit dem Experiment und gebt uns Feedback zu den konkreten Forderungen zum Thema Digitalisierung und Demokratie.</p>
+
+<p>Wir lernen daraus:
+<ul>
+	<li>Wie wichtig ist euch das Thema (Digitalisierung)?</li>
+	<li>Wie hoch ist die Zustimmungsfähigkeit zu den konkreten Forderungen der Expertinnen und Experten für die Teilnehmenden der Akademie?</li>
+	<li>Wie viele von Euch lassen sich gern auf die Möglichkeit einer Online-Abstimmung ein?</li>
+	<li>Wie lohnenswert ist es für das <a href="http://forum-ds.de">Forum demokratischer Sozialismus</a> an solchen Experimenten der Online-Beteiligung weiter zu arbeiten?</li>
+	<li>Welche praktischen und politischen Probleme gibt es mit Online-Beteiligungen wie dieser?</li>
+</ul>
+</p>
+
+<h2>Hilfe und Kontakt</h2>
+
+<p>Wenn ihr Fragen, Probleme oder Anregungen habt, wendet auch per <a href="mailto:mail@martindelius.de">E-Mail</a>, auf <a href="http://twitter.com/martindelius">Twitter</a> oder einfach persönlich an <a href="http://martindelius.de">Martin Delius</a>.</p>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <link rel="stylesheet" type="text/css" href="{% static 'votes/style.css' %}" />
+
+    <head>
+        <title>Online-Abstimmung zur fds-Akademie 2016</title>
+    </head>
+    <body>
+	<div class="menu">
+		<ul>
+			<li><img src="{% static 'votes/images/logo.png' %}" /></li>
+		<li><a href="{% url 'home' %}">Startseite</a></li>
+		<li><a href="{% url 'votes:register' %}">Registrieren</a></li>
+		<li><a href="{% url 'votes:index' %}">Abstimmungen</a></li>		
+		<li><a href="{% url 'votes:log' %}">Log</a></li>
+		<li><a href="">Über</a></li>
+		<li id="user_menu">
+			{% if user.is_authenticated %}
+				<span>Angemeldet als {{ user.username }}.<a href="{% url 'logout' %}"> (Abmelden)</a><span>
+			{% else %}
+		        <a href="{% url 'votes:login' %}">Anmelden</a>
+		{% endif %}
+		</li>
+		</ul>
+	</div>
+       	<div id="content-wrapper">
+        	{% block content %}{% endblock %}
+ 	</div>
+    </body>
+</html>

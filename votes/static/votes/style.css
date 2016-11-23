@@ -1,0 +1,284 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: arial;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+b { font-weight: bold; }
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #DF0029;
+}
+
+// Votey styles
+
+#user_menu {
+    	position: absolute;
+	right: 0px;
+}
+
+.menu {
+    	width: 100%;
+	font-size: 110%;
+}
+
+.menu ul {
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+.menu ul li {
+	float: left;
+}
+
+.menu ul li a {
+    	display: block;
+    	color: white;
+    	text-align: center;
+    	padding: 14px 16px;
+	font-weight: normal;
+}
+
+li#user_menu {
+	color: white;
+	text-align: center;
+	display: block;
+	float: right;
+}
+
+#user_menu a { display: inline-block }
+
+.menu ul li a:hover {
+    	background-color: #111;
+	color: #DF0029;
+}
+
+.menu ul li img {
+	height: 40px;
+	margin-top: 2px;
+}
+
+.menu ul li:first-child {
+	background-color: #fff;
+}
+
+#content-wrapper {
+	color: #333;
+	padding: 1em;
+}
+
+#content-wrapper h1 {
+	font-size: 150%;
+}
+
+#content-wrapper h2 {
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 1em;
+}
+
+#content-wrapper h3 {
+	font-size: 110%;
+	text-decoration: underline;
+	padding: 8px 0;
+}
+
+#content-wrapper p {
+	font-size: 100%;
+	line-height: 1.5;
+	padding-top: 1em;
+}
+
+#content-wrapper table {
+	text-align: left;
+	margin: 0 auto;
+}
+
+#content-wrapper table tr {
+	line-height: 2;
+	font-size: 110%;
+}
+
+#content-wrapper ul {
+	padding-left: 1em;
+	padding-top: 1em;
+}
+
+#content-wrapper ul li {
+	line-height: 1.5;
+}
+
+.formular {
+	width: 40%;
+	min-width: 300px;
+    	margin: 0 auto;
+}
+
+.formular label {
+	font-weight: bold;
+	display: block;
+	width: 100%
+    	font-size: 110%;
+	line-height: 2;
+	text-align: left;
+}
+
+.formular input[type="text"] {
+    	line-height: 2;
+    	width: 100%;
+    	text-align: left;
+    	font-size: 110%;
+}
+
+.formular input[type="password"] {
+    	line-height: 2;
+    	width: 100%;
+    	text-align: left;
+    	font-size: 110%;
+}
+
+.abstimmung {
+	width: 60%;
+	min-width: 500px;
+	margin: 0 auto;
+}
+
+.abstimmung p#question_stats {
+	margin-top: 0;
+}
+
+.abstimmung p {
+	margin: 1em 0;
+}
+
+.abstimmung input[type="submit"] {
+    	background:#333; 
+    	border:0 none;
+    	cursor:pointer;
+	width: 100%;
+	color: #fff;
+	margin: 5px 0;
+    	font-size: 110%;
+	line-height: 2;
+}
+
+.abstimmung p.message {
+	width: 100%
+}
+
+.formular button {
+    	background:#333; 
+    	border:0 none;
+    	cursor:pointer;
+	width: 100%;
+	display: block;
+	color: #fff;
+	margin: 1em 0;
+    	font-size: 110%;
+	line-height: 2;
+}
+
+.formular button a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.formular p {
+	line-heigt: 2;
+	font-weight: bold;
+	text-align: center;
+	font-size:110%;
+}
+
+p#question_stats {
+	font-size: 80%;
+	text-decoration: underline;
+	padding-left: 0.5em;
+    	padding-top: 0px;
+}
+
+p.message {
+	width: 60%;
+    	margin: 1em auto;
+    	background-color: #eee;
+    	padding: 5px;
+    	font-weight: bold;
+    	border-bottom: solid #333 1px;
+    	text-align: center;
+}
+
+ul.summary {
+	margin-left: 3em;
+    	line-height: 1.5;
+}
+
+ul.protokoll {
+	margin: 0 3em;
+    	font-size: 90%;
+    	line-height: 1.5;
+}
+
+ul.protokoll li {
+	background-color: #eee;
+    	border-bottom: dotted #333 1px;
+    	padding: 2px;
+}
+
+div#log {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#log embed {
+	width: 100%;
+	border-left: solid 1px #000;
+}

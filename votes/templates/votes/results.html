@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Ergebnisse für Abstimmung: "{{ question.question_title }}"</h2>
+<p id=question_stats>Erstellt: {{ question.pub_date|date:"d.m.Y H:i" }}Uhr , Dauer in Tagen: {{ question.duration }}</p>
+<p>{{ question.question_text }}</p>
+
+{% if question.is_finished %}
+	<h2>Zusammenfassung</h2>
+	<ul class="summary">
+		<li>Abgegebene Stimmen: <b>{{ votes_list|length }}</b></li>
+	{% for choice in question.choice_set.all %}
+	<li>Da von entfallen auf "{{ choice.choice_text }}" <b>{{ choice.votes }} Stimmen.</b></li>
+	{% endfor %}
+	</ul>
+	<h2>Protokoll</h2>
+	<ul class="protokoll">
+		<li>{{ question.pub_date|date:"d.m.Y H:i" }}: Abstimmung gestartet</li>
+	{% for votes in votes_list %}
+		<li>{{ votes.voting_time|date:"d.m.Y H:i" }}: {{ votes.token }} hat abgestimmt.</li>
+	{% endfor %}
+		<li>{{ finished|date:"d.m.Y H:i" }}: Abstimmung beendet.</li>
+	</ul>
+{% else %}
+	<p class="message">Die Abstimmung ist noch nicht beendet. Das Ergebnis kann erst nach Ende der Abstimmung eingesehen werden.</p>
+{% endif %}
+{% endblock %}

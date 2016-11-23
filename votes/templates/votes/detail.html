@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if error_message %}<p class="message">{{ error_message }}</p>{% endif %}
+
+{% if question.is_finished %}
+	<div class="abstimmung">
+	<p class="message">Die Abstimmung ist bereits beendet. Sie können sich die Ergebnisse <a href="{% url 'votes:results' question.id %}">hier</a> ansehen.</p>  
+	</div>
+{% else %}
+	<div class="abstimmung">
+	<h1>Abstimmung</h1>
+	<h2>{{ question.question_title }}</h2>
+	<p id=question_stats>Erstellt: {{ question.pub_date|date:"d.m.Y H:i" }}Uhr , Dauer in Tagen: {{ question.duration }}</p>
+	<p>{{ question.question_text }}</p>
+	<form action="{% url 'votes:vote' question.id %}" method="post">
+	{% csrf_token %}
+	{% for choice in question.choice_set.all %}
+	    <input type="submit" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.choice_text }}" />
+	{% endfor %}
+	</form>
+	</div>
+{% endif %}
+{% endblock %}

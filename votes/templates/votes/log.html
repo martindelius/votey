@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div id="log">
+<h2>Systemlog</h2>
+<p>Zur Herstellung der weitest möglichen Nachvollziehbarkeit der anonymen Abstimmungen im System wird ein abstimmungsübergreifendes Logbuch angefertigt, dass von angemeldeten Nutzenden eingesehen werden kann.<p>
+<embed src="{% static 'log/transparency.log' %}" />
+</div>
+{% endblock %}
