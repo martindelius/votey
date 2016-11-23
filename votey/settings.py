@@ -25,7 +25,7 @@ SECRET_KEY = '&!ow=rhwzb(te15iytq6fr1v83)bh3*jcqk))(yj7bw_c4+*27'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['134.119.46.6']
 
 
 # Application definition
@@ -122,6 +122,7 @@ DEFAULT_CONTENT_TYPE = 'text/html'
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/votey/static/'
 
 # Logging configuration
 
