@@ -24,7 +24,7 @@ logger = logging.getLogger('votey')
 @csrf_protect
 def register(request):
 	if request.method == 'POST':
-                form = RegistrationForm(request.POST)
+		form = RegistrationForm(request.POST)
 		if form.is_valid():
 			form_token = form.cleaned_data['token']
 			form_username=form.cleaned_data['username']
@@ -39,13 +39,13 @@ def register(request):
 				setattr(t, 'used', True)
 				setattr(t, 'used_by', User.objects.get(pk=user.id))
 				t.save()
-                                logger.info('(Konto ' + form_token + '): Erfolgreich registriert.')
-                                return HttpResponseRedirect('/register/success/')
-			if t.used is True:
+				logger.info('(Konto ' + form_token + '): Erfolgreich registriert.')
+				return HttpResponseRedirect('/register/success/')
+			else:
                                 return render(request, 'votes/register.html', {'form' : form, 'message': "Ihr Token wurde bereits zur Registrierung eines Nutzerkontos verwendet. Melden sie sich einfach an."})
 	else:
-        	form = RegistrationForm()
- 		return render(request,'votes/register.html',{'form':form})
+		form = RegistrationForm()
+		return render(request,'votes/register.html',{'form':form})
  
 def register_success(request):
     return render_to_response(
@@ -78,7 +78,7 @@ class DetailView(LoginRequiredMixin, generic.DetailView):
     model = Question
     template_name = 'votes/detail.html'
 
-    def get_queryset(self):
+def get_queryset(self):
 	return Question.objects.filter(pub_date__lte=timezone.now())
 
 @login_required(login_url='/login/')
@@ -105,5 +105,5 @@ def vote(request, question_id):
 			Votes.objects.create(token=Token.objects.filter(used_by=request.user)[0], question=question)
 			selected_choice.votes += 1
 			selected_choice.save()
-                        logger.info('(Konto ' + user_token.token + '): Antrag Nr. ' + question_id + ' abgestimmt.')
+			logger.info('(Konto ' + user_token.token + '): Antrag Nr. ' + question_id + ' abgestimmt.')
 			return HttpResponseRedirect(reverse('votes:results', args=(question_id,)))
