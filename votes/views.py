@@ -61,6 +61,9 @@ def log(request):
 	context = {'user' : request.user}
 	return render(request, 'votes/log.html', context)
 
+def ueber(request):
+        context = {'user' : request.user}
+        return render(request, 'votes/ueber.html', context)
 
 class IndexView(LoginRequiredMixin, generic.ListView):
     login_url = 'login/'
