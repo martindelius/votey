@@ -4,19 +4,21 @@
 <html>
     <link rel="stylesheet" type="text/css" href="{% static 'votes/style.css' %}" />
 
+    <meta name="viewport" content="width=device-width" />
     <head>
         <title>Online-Abstimmung zur fds-Akademie 2016</title>
     </head>
     <body>
-	<div class="menu">
+
+	<div id="menu">
 		<ul>
-			<li><img src="{% static 'votes/images/logo.png' %}" /></li>
+		<li><img src="{% static 'votes/images/logo.png' %}" /></li>
 		<li><a href="{% url 'home' %}">Startseite</a></li>
 		<li><a href="{% url 'votes:register' %}">Registrieren</a></li>
 		<li><a href="{% url 'votes:index' %}">Abstimmungen</a></li>		
 		<li><a href="{% url 'votes:log' %}">Log</a></li>
 		<li><a href="{% url 'votes:ueber' %}">Über</a></li>
-		<li id="user_menu">
+		<li class="user_menu">
 			{% if user.is_authenticated %}
 				<span>Angemeldet als {{ user.username }}.<a href="{% url 'logout' %}"> (Abmelden)</a><span>
 			{% else %}
@@ -25,7 +27,8 @@
 		</li>
 		</ul>
 	</div>
-       	<div id="content-wrapper">
+       	
+	<div id="content-wrapper">
         	{% block content %}{% endblock %}
  	</div>
     </body>

@@ -58,65 +58,27 @@ a {
 
 // Media Queries
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-#content-wrapper { float: none; width:100% }
-h1 { font-size: 150% }
-h2 { font-size: 140% }
-h3 { font-size: 130% }
-body { font-size: 120% }
-}
-
-/* iPhone 6 */
-@media only screen 
+i@media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-#content-wrapper { float: none; width:100% }
-h1 { font-size: 150% }
-h2 { font-size: 140% }
-h3 { font-size: 130% }
-body { font-size: 120% }
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
+	.abstimmung { width: 100% }
+	min-width: 0px;
 }
 
 // Votey styles
 
-#user_menu {
+li.user_menu {
     	position: absolute;
 	right: 0px;
 }
 
-.menu {
+#menu {
     	width: 100%;
 	font-size: 110%;
 }
 
-.menu ul {
+#menu ul {
     	list-style-type: none;
     	margin: 0;
     	padding: 0;
@@ -124,19 +86,23 @@ body { font-size: 120% }
 	background-color: #333;
 }
 
-.menu ul li {
+#menu ul li {
 	float: left;
 }
 
-.menu ul li a {
-    	display: block;
+#menu ul li.user_menu {
+        float: right;
+}
+
+#menu ul li a {
     	color: white;
+	display: inline-table;
     	text-align: center;
     	padding: 14px 16px;
 	font-weight: normal;
 }
 
-li#user_menu {
+li.user_menu {
 	color: white;
 	text-align: center;
 	display: block;
@@ -145,17 +111,17 @@ li#user_menu {
 
 #user_menu a { display: inline-block }
 
-.menu ul li a:hover {
+#menu ul li a:hover {
     	background-color: #111;
 	color: #DF0029;
 }
 
-.menu ul li img {
+#menu ul li img {
 	height: 40px;
 	margin-top: 2px;
 }
 
-.menu ul li:first-child {
+#menu ul li:first-child {
 	background-color: #fff;
 }
 
@@ -236,8 +202,6 @@ li#user_menu {
 }
 
 .abstimmung {
-	width: 60%;
-	min-width: 500px;
 	margin: 0 auto;
 }
 
@@ -253,9 +217,9 @@ li#user_menu {
     	background:#333; 
     	border:0 none;
     	cursor:pointer;
-	width: 100%;
+	width: 50%;
 	color: #fff;
-	margin: 5px 0;
+	margin: 5px auto;
     	font-size: 110%;
 	line-height: 2;
 }
