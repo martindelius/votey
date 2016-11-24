@@ -67,6 +67,18 @@ h3 { font-size: 130% }
 body { font-size: 120% }
 }
 
+/* iPhone 6 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+#content-wrapper { float: none; width:100% }
+h1 { font-size: 150% }
+h2 { font-size: 140% }
+h3 { font-size: 130% }
+body { font-size: 120% }
+}
+
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
 /* Styles */
