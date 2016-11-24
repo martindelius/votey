@@ -1,0 +1,5 @@
+*.swp
+static/
+db.splite3
+__cache__/
+*.csv
