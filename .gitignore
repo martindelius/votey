@@ -1,5 +1,5 @@
 *.swp
 static/
-db.splite3
-__cache__/
+db.sqlite3
+__pycache__/
 *.csv
