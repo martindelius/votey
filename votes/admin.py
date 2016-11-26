@@ -14,6 +14,8 @@ class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['question_title']}),
 	(None,               {'fields': ['question_text']}),
+	(None,               {'fields': ['question_reason']}),
+	(None,               {'fields': ['question_link']}),
         ('Startdatum und Uhrzeit', {'fields': ['pub_date'], 'classes': ['collapse']}),
 	('Dauer', {'fields': ['duration'], 'classes': ['collapse']}),
     ]

@@ -13,6 +13,10 @@
 	<h2>{{ question.question_title }}</h2>
 	<p id=question_stats>Erstellt: {{ question.pub_date|date:"d.m.Y H:i" }}Uhr , Dauer in Tagen: {{ question.duration }}</p>
 	<p>{{ question.question_text }}</p>
+	<h3>Begründung</h3>
+	<p>{{ question.question_reason }}</p>
+	<h3>Link</h3>
+	<p>{{ question.question_link }}</p>
 	<form action="{% url 'votes:vote' question.id %}" method="post">
 	{% csrf_token %}
 	{% for choice in question.choice_set.all %}

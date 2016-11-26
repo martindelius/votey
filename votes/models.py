@@ -12,6 +12,8 @@ from django.contrib.auth.models import User
 class Question(models.Model):
 	question_title = models.CharField(max_length=50)
 	question_text = models.CharField(max_length=1000)
+	question_reason = models.CharField(max_length=2000,default="")
+	question_link = models.URLField(default="http://votey.martindelius.de")
 	pub_date = models.DateTimeField('date published')
 	duration = models.IntegerField(default=1)
 
